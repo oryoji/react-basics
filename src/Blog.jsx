@@ -6,7 +6,7 @@ class Blog extends React.Component{
         super(props);
     }
     render(){
-        const authorName = "Oryoji"
+        const authorName = "Oryojinaoto,gitブランチ"
         return(
             <>
                 <Article
