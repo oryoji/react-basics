@@ -1,22 +1,22 @@
+// コンポーネントの基本学習2回目
 import React from 'react';
-import Article from "./Article"
+// Article.jsxのimport
+import Article from "./Article";
 
-class Blog extends React.Component{
+class Blog extends React.Component {
+    // コンストラクターの初期化
     constructor(props){
         super(props);
     }
     render(){
-        const authorName = "Oryojinaoto,gitブランチ6"
+        const authorName = "Naoto"
         return(
-            <>
-                <Article
-                    title={"Reactの使い方"} 
-                    order={3}
-                    isPublished={true}
-                    author={authorName}
-                    
-                />
-            </>
+            <React.Fragment>
+                {/* Articleコンポーネントを呼び出す */}
+                <Article title={"Reactのpropsの受け渡し"} />
+                <Article title={"JSXの使い方"} />
+                <Article title={"環境構築してみよう"} />
+            </React.Fragment>
         )
     }
 }
