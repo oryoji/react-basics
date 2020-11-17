@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Blog from './Blog'
+// exportしたものはimportして使う
+import Blog from './Blog';
 
 ReactDOM.render(
   <React.StrictMode>
