@@ -7,15 +7,30 @@ class Blog extends React.Component {
     // コンストラクターの初期化
     constructor(props){
         super(props);
+        this.state = {
+            isPublished: false,
+            count: 0
+        }
     }
+
+    // 公開チェックボックスを反映させる関数
+    togglePublished = () => {
+        this.setState({
+            isPublished: !this.state.isPublished
+        })
+    };
+
     render(){
         const authorName = "Naoto"
         return(
             <React.Fragment>
                 {/* Articleコンポーネントを呼び出す */}
-                <Article title={"Reactのpropsの受け渡し"} />
-                <Article title={"JSXの使い方"} />
-                <Article title={"環境構築してみよう"} />
+                <Article 
+                    title={"Reactのpropsの受け渡し"} 
+                    isPublished={this.state.isPublished} 
+                    toggle={() => this.togglePublished()} 
+                    count={this.state.count}
+                />
             </React.Fragment>
         )
     }
